@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  app:
+    build: .
+    container_name: react-native-test
+    entrypoint: ./.docker/entrypoint.sh
+    ports:
+      - 19000:19000
+      - 19002:19002
+      - 19006:19006
+    volumes:
+      - .:/home/node/app
